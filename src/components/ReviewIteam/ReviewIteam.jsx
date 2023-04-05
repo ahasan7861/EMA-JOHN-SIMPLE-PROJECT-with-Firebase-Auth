@@ -3,7 +3,7 @@ import './ReviewIteam.css';
 
 import { BsTrash } from "react-icons/bs";
 
-const ReviewIteam = ({product}) => {
+const ReviewIteam = ({product, handleRemoveFromCart}) => {
     const {id, img, price, name, quantity} = product;
     return (
         <div className='review-item'>
@@ -15,7 +15,7 @@ const ReviewIteam = ({product}) => {
         <p>Order Quantity: <span className='orange-text'>{quantity}</span> </p>       
             </div>
 
-            <button className='btn-delete'> <span className='delete-icon'><BsTrash/> </span></button>
+            <button onClick={()=> handleRemoveFromCart(id)} className='btn-delete'> <span className='delete-icon'><BsTrash/> </span></button>
         </div>
     );
 };

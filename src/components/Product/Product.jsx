@@ -4,6 +4,7 @@ import './Product.css';
 import { BsFillCartPlusFill } from "react-icons/bs";
 
 
+
 const Product = (props) => {
     
     const {img, name, seller, quantity, price, ratings} = props.product;

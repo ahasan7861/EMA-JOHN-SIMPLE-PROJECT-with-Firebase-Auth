@@ -5,6 +5,20 @@
     top: 0;
 }
 
+.btn-clear-cart{
+    margin: 10px auto;
+    font-size: 21px;
+    background-color: #FF3030;
+    color: white;
+    border-radius: 4px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
 .cart p{
     font-family: 'Lato';
     font-style: normal;

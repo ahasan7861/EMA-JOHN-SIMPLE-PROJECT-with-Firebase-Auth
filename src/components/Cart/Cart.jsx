@@ -3,7 +3,7 @@ import './Cart.css';
 
 import { BsTrash } from "react-icons/bs";
 
-const Cart = ({cart, handleClearCart}) => {
+const Cart = ({cart, handleClearCart, children}) => {
 
     
 
@@ -35,6 +35,7 @@ const Cart = ({cart, handleClearCart}) => {
                 <span>Clear Cart</span>                  
                 <BsTrash/> 
                 </button>
+                {children}
         </div>
     );
 };

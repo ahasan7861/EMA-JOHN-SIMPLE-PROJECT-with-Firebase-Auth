@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Cart from '../Cart/Cart';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import ReviewIteam from '../ReviewIteam/ReviewIteam';
 import './Orders.css'
 import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
+import { BsFillCalendar2WeekFill } from "react-icons/bs";
 
 const Orders = () => {
     const savedCart = useLoaderData()
@@ -33,7 +34,17 @@ const Orders = () => {
                 }
             </div>
             <div className='cart-container'>
-                <Cart cart={cart} handleClearCart={handleClearCart}></Cart>
+                <Cart cart={cart} handleClearCart={handleClearCart}>
+                
+                <Link className='proceed-link' to="/checkout">
+
+                <button  className='btn-proceed'>
+                <span>Proceed Checkout</span><BsFillCalendar2WeekFill/></button>
+                    
+                
+                </Link>
+
+                </Cart>
             </div>
             
         </div>

@@ -3,6 +3,10 @@ import { addToDb, deleteShoppingCart, getShoppingCart } from '../../utilities/fa
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
+import { Link } from 'react-router-dom';
+import { BsFillArrowRightSquareFill } from "react-icons/bs";
+
+
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
@@ -58,7 +62,14 @@ const Shop = () => {
 
             <div className="cart-container">
                 
-                <Cart cart={cart} handleClearCart={handleClearCart}></Cart>
+                <Cart cart={cart} handleClearCart={handleClearCart}>
+                    <Link className='proceed-link' to={"/orders"}>
+                    
+                <button  className='btn-proceed'>
+                <span>Review Order</span>                  
+                <BsFillArrowRightSquareFill/></button>
+                    </Link>
+                </Cart>
             </div>
             
         </div>
